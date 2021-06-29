@@ -13,8 +13,8 @@ class MyApp extends StatelessWidget{
      theme: ThemeData(
         primarySwatch: Colors.green,
      ),
-     home: //MyDeals(),
-      HowItWorks(),
+     home: MyDeals(),
+      //HowItWorks(),
     
     debugShowCheckedModeBanner: false,
    );

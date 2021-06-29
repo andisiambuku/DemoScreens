@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 
 void displayModalBottomSheet(context) {
@@ -7,17 +5,44 @@ void displayModalBottomSheet(context) {
       context: context,
       builder: (BuildContext bc) {
         return Container(
-          child: new Wrap(
+          height: 200,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(40.0),
+                  topRight: Radius.circular(40.0),
+                  bottomLeft: Radius.circular(40.0),
+                  bottomRight: Radius.circular(40.0))),
+          child: Wrap(
             children: <Widget>[
-              new ListTile(
-                title: new Text('Logout'),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Text(
+                    'Logout',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20.0,
+                    ),
+                  ),
+                  IconButton(
+                    icon: Icon(Icons.cancel_sharp),
+                    //alignment: Alignment.bottomRight,
+                    onPressed: () => Navigator.pop(context),
+                  )
+                ],
               ),
-              new ListTile(
-                  title: new Text('Yes, Logout'),
-                  onTap: () => {}),
-              new ListTile(
-                title: new Text('No, Cancel'),
-                onTap: () => {},
+              Divider(
+                thickness: 2,
+              ),
+              Center(
+                child: ListTile(title: Text('Yes, Logout'), onTap: () => {}),
+              ),
+              Center(
+                child: ListTile(
+                  title: Text('No, Cancel'),
+                  onTap: () => {},
+                ),
               ),
             ],
           ),
@@ -25,3 +50,26 @@ void displayModalBottomSheet(context) {
       });
 }
 
+/*ListTile(
+                      title: Text('Logout'),
+                  ),*/
+/* showCupertinoModalPopup(context: context,
+   builder: (BuildContext context) => CupertinoActionSheet(
+      title: Text('Logout'),
+      message: Text('Are you sure you want to logout?'),
+      cancelButton: CupertinoActionSheetAction(
+        child: Text('Exit'),
+       // child: Icon(Icons.cancel),
+      onPressed: ()=> Navigator.pop(context)),
+      actions: <CupertinoActionSheetAction>[
+        CupertinoActionSheetAction(
+          child: Text('Yes, Logout'),
+          onPressed: (){},
+        ),
+        CupertinoActionSheetAction(
+           child: Text('No, Cancel'),
+          onPressed: (){},
+        )
+      ],
+   )
+   );*/
