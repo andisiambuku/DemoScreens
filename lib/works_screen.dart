@@ -26,19 +26,27 @@ class HowItWorks extends StatelessWidget {
               color: Colors.blue[50],
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('Search',
+                      Padding(
+                        padding: const EdgeInsets.only(top:12.0),
+                        child: Text('Search',
                      style: TextStyle(
-                       fontWeight: FontWeight.bold,
-                       color: Colors.blue[900],
-                       ),),
-                      SizedBox(height: 0.5),
-                      Text('Find property\naccording to your preferences.',
-                      style: TextStyle(
-                      color: Colors.blue.withOpacity(0.5),)),
+                         fontWeight: FontWeight.bold,
+                         fontSize: 20.0,
+                         color: Colors.blue[900],
+                         ),),
+                      ),
+                      SizedBox(height: 5),
+                      Padding(
+                        padding: const EdgeInsets.only(top:8.0),
+                        child: Text('Find property\naccording to your preferences.',
+                        style: TextStyle(
+                        color: Colors.blue.withOpacity(0.5),)),
+                      ),
                     ],
                   ),
                   Image(image: AssetImage('assets/images/House searching-rafiki.png')),
@@ -55,20 +63,28 @@ class HowItWorks extends StatelessWidget {
                 color: Colors.amber[50],
                   child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Image(image: AssetImage('assets/images/For sale-amico.png')),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
-                        Text('List',
-                         style: TextStyle(
+                        Padding(
+                          padding: const EdgeInsets.only(top:12.0),
+                          child: Text('List',
+                           style: TextStyle(
                        fontWeight: FontWeight.bold,
+                       fontSize: 20.0,
                        color: Colors.amber[900],
                        ),),
-                        SizedBox(height: 0.5),
-                        Text('Sell or rent a property\naccording to your needs.',
-                        style: TextStyle(
-                      color: Colors.amber.withOpacity(0.5),),)
+                        ),
+                        SizedBox(height: 5),
+                        Padding(
+                          padding: const EdgeInsets.only(top:8.0),
+                          child: Text('Sell or rent a property\naccording to your needs.',
+                          style: TextStyle(
+                      color: Colors.amber.withOpacity(0.5),),),
+                        )
                       ],
                     ),
                   ],
@@ -84,19 +100,27 @@ class HowItWorks extends StatelessWidget {
               color: Colors.green[50],
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('Connect',
-                       style: TextStyle(
-                       fontWeight: FontWeight.bold,
-                       color: Colors.green[900],
-                       ),),
-                      SizedBox(height: 0.5),
-                      Text('Connect and discuss\nwith property buyers.',
-                      style: TextStyle(
-                      color: Colors.green.withOpacity(0.5),)
+                      Padding(
+                        padding: const EdgeInsets.only(top:12.0),
+                        child: Text('Connect',
+                         style: TextStyle(
+                         fontWeight: FontWeight.bold,
+                         fontSize: 20.0,
+                         color: Colors.green[900],
+                         ),),
+                      ),
+                      SizedBox(height: 5),
+                      Padding(
+                        padding: const EdgeInsets.only(top:8.0),
+                        child: Text('Connect and discuss\nwith property buyers.',
+                        style: TextStyle(
+                        color: Colors.green.withOpacity(0.5),)
+                        ),
                       ),
                     ],
                   ),
@@ -114,21 +138,32 @@ class HowItWorks extends StatelessWidget {
                color: Colors.red[50],
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Image(image: AssetImage('assets/images/Select house-pana.png')),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Image(image: AssetImage('assets/images/Select house-pana.png')),
+                  ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
-                      Text('Close',
-                       style: TextStyle(
-                       fontWeight: FontWeight.bold,
-                       color: Colors.red[900],
-                       ),),
-                      SizedBox(height: 0.5),
-                      Text('Close the best deal with\nthe buyer or tenants',
-                      style: TextStyle(
-                      color: Colors.red.withOpacity(0.5),
-                       ),),
+                      Padding(
+                        padding: const EdgeInsets.only(top:12.0),
+                        child: Text('Close',
+                         style: TextStyle(
+                         fontWeight: FontWeight.bold,
+                         fontSize: 20.0,
+                         color: Colors.red[900],
+                         ),),
+                      ),
+                      SizedBox(height:  5),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 8.0),
+                        child: Text('Close the best deal with\nthe buyer or tenants',
+                        style: TextStyle(
+                        color: Colors.red.withOpacity(0.5),
+                         ),),
+                      ),
                     ],
                   ),
                 ],
