@@ -1,4 +1,6 @@
+import 'package:demoscreens/works_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 void displayModalBottomSheet(context) {
   showModalBottomSheet(
@@ -12,37 +14,47 @@ void displayModalBottomSheet(context) {
                   topRight: Radius.circular(40.0),
                   bottomLeft: Radius.circular(40.0),
                   bottomRight: Radius.circular(40.0))),
-          child: Wrap(
-            children: <Widget>[
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Text(
-                    'Logout',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20.0,
+          child: ListView(
+            children: 
+              [Wrap(
+                children: <Widget>[
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Text(
+                        'Logout',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20.0,
+                        ),
+                      ),
+                      IconButton(
+                        icon: Icon(Icons.cancel_sharp),
+                        //alignment: Alignment.bottomRight,f
+                        onPressed: () => Navigator.pop(context),
+                      )
+                    ],
+                  ),
+                  Divider(
+                    thickness: 2,
+                  ),
+                  Center(
+                    child: ListTile(title: Text('Yes, Logout'), onTap: () => {}),
+                  ),
+                  Center(
+                    child: ListTile(
+                      title: Text('No, Cancel'),
+                      onTap: () => {},
                     ),
                   ),
-                  IconButton(
-                    icon: Icon(Icons.cancel_sharp),
-                    //alignment: Alignment.bottomRight,
-                    onPressed: () => Navigator.pop(context),
-                  )
+                 Center(
+                    child: ListTile(
+                      title: Text('To Works Page'),
+                      onTap: () =>Navigator.push(context,MaterialPageRoute(builder: (context) {return HowItWorks();})) //() => Navigator.push(context,false),
+                    ),
+                  ),
                 ],
-              ),
-              Divider(
-                thickness: 2,
-              ),
-              Center(
-                child: ListTile(title: Text('Yes, Logout'), onTap: () => {}),
-              ),
-              Center(
-                child: ListTile(
-                  title: Text('No, Cancel'),
-                  onTap: () => {},
-                ),
               ),
             ],
           ),
